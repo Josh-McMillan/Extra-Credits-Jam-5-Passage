@@ -3,13 +3,25 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
+/Jammy's Adventure/[Ll]ibrary/
+
 /[Tt]emp/
 /Jammy's Adventure/[Tt]emp/
+
 /[Oo]bj/
+/Jammy's Adventure/[Oo]bj/
+
 /[Bb]uild/
+/Jammy's Adventure/[Bb]uild/
+
 /[Bb]uilds/
+/Jammy's Adventure/[Bb]uilds/
+
 /[Ll]ogs/
+/Jammy's Adventure/[Ll]ogs/
+
 /[Mm]emoryCaptures/
+/Jammy's Adventure/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
