@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heal : MonoBehaviour
+public class Restore : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Damagable>().Heal();
-            Destroy(gameObject);
+            other.gameObject.GetComponent<PlayerHealth>().Restore();
         }
     }
 }

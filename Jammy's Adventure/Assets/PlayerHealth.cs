@@ -9,6 +9,8 @@ public class PlayerHealth : Damagable
 
     [SerializeField] private MeshRenderer jarGlassRenderer;
 
+    [SerializeField] private MeshRenderer faceRenderer;
+
     protected override void Start()
     {
         base.Start();
@@ -48,6 +50,8 @@ public class PlayerHealth : Damagable
         {
             jarGlassRenderer.material.color = jarColors[currentHealth - 1];
         }
+
+        faceRenderer.material.mainTextureOffset = new Vector2(0.125f * (float)currentHealth, 0.0f);
     }
 
     IEnumerator RunInvincibilityFrames()

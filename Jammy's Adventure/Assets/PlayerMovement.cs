@@ -31,12 +31,6 @@ public class PlayerMovement : MonoBehaviour
         {
             movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 
-            if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
-            {
-                rotationDirection = Vector3.RotateTowards(characterModel.forward, movementDirection, maxAngularSpeed * Time.deltaTime, 0.0f);
-                characterModel.rotation = Quaternion.LookRotation(rotationDirection);
-            }
-
             movementDirection *= speed;
 
             if (Input.GetButton("Jump"))
@@ -49,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
             movementDirection.y -= gravity * Time.deltaTime;
         }
 
+        rotationDirection = Vector3.RotateTowards(characterModel.forward, new Vector3(movementDirection.x, 0.0f, movementDirection.z), maxAngularSpeed * Time.deltaTime, 0.0f);
+        characterModel.rotation = Quaternion.LookRotation(rotationDirection);
 
         controller.Move(movementDirection * Time.deltaTime);
     }

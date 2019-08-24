@@ -7,6 +7,7 @@ TextureImporter:
     21300004: tex_jar_face_2
     21300006: tex_jar_face_3
     21300008: tex_jar_face_4
+    21300010: tex_jar_face_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -50,9 +51,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -103,10 +104,10 @@ TextureImporter:
       name: tex_jar_face_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 3
+        y: 3
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,7 +115,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3c16ca9fdb4d6f4a9cdc37b1196fbd0
+      spriteID: 35d8eba2d5ee81844b2feded36d0d4e7
       vertices: []
       indices: 
       edges: []
@@ -123,10 +124,10 @@ TextureImporter:
       name: tex_jar_face_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 35
+        y: 3
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c7d6eb005a8f5f429a3ed155d2483fc
+      spriteID: c579df7b67f5b7749b2a70f95898ae09
       vertices: []
       indices: 
       edges: []
@@ -143,10 +144,10 @@ TextureImporter:
       name: tex_jar_face_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 67
+        y: 3
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc664bc4069f5024ba1c82528665a30a
+      spriteID: 1e3463bd16f9e8847928eb0e90ef7bf2
       vertices: []
       indices: 
       edges: []
@@ -163,10 +164,10 @@ TextureImporter:
       name: tex_jar_face_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 99
+        y: 3
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a793ce9bfd35d0d48a876b00d18f9260
+      spriteID: 44229fe3da0c86e448e468e7807f0459
       vertices: []
       indices: 
       edges: []
@@ -183,10 +184,10 @@ TextureImporter:
       name: tex_jar_face_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 131
+        y: 3
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +195,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca3c8d8048bf951499909acb16f27b29
+      spriteID: 185c2646ae033a9498f61bb9c4358f54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tex_jar_face_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 3
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe86427d60eb24fa860604b2259f99
       vertices: []
       indices: 
       edges: []
