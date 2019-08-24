@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerHealth : Damagable
 {
+    public static Action Died;
+
     [SerializeField] private Color[] jarColors;
 
     [SerializeField] private MeshRenderer jarGlassRenderer;
@@ -17,6 +19,8 @@ public class PlayerHealth : Damagable
         UpdateHealth();
     }
 
+    // TODO: Troubleshoot Death Animation!
+
     protected override void OnTakeDamage()
     {
         if (!invulnerable && currentHealth > 0)
@@ -25,7 +29,16 @@ public class PlayerHealth : Damagable
 
             currentHealth--;
             UpdateHealth();
-            StartCoroutine(RunInvincibilityFrames());
+
+            if (currentHealth != 0)
+            {
+                PlayerParticles.Play();
+                StartCoroutine(RunInvincibilityFrames());
+            }
+            else
+            {
+                Died();
+            }
         }
     }
 
