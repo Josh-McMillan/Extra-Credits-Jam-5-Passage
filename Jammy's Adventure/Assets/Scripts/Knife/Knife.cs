@@ -7,6 +7,8 @@ public class Knife : MonoBehaviour
 {
     [SerializeField] private float walkRange = 5.0f;
 
+    [SerializeField] private Vector2 walkArea;
+
     [SerializeField] private float attackRange = 2.5f;
 
     [SerializeField] private float attackRotationSpeed = 5.0f;
@@ -38,7 +40,10 @@ public class Knife : MonoBehaviour
 
     public bool PlayerInRadius()
     {
-        return Vector3.Distance(startPosition, player.position) <= walkRange * 2.0f;
+        return player.position.x > startPosition.x - walkArea.x &&
+               player.position.x < startPosition.x + walkArea.x &&
+               player.position.z > startPosition.z - walkArea.y &&
+               player.position.z < startPosition.z + walkArea.y;
     }
 
     public bool PlayerInAttackRadius()
@@ -86,8 +91,8 @@ public class Knife : MonoBehaviour
 
     private Vector3 GenerateNewWanderPoint(float y)
     {
-        float x = startPosition.x + Random.Range(-walkRange, walkRange);
-        float z = startPosition.z + Random.Range(-walkRange, walkRange);
+        float x = startPosition.x + Random.Range(-walkArea.x, walkArea.x);
+        float z = startPosition.z + Random.Range(-walkArea.y, walkArea.y);
 
         return new Vector3(x, y, z);
     }

@@ -10,7 +10,9 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] private Vector3 closeOffsetPosition;
 
-    [SerializeField] private float playerMotionCompensation = 2.0f;
+    [SerializeField] private float minY = 3.0f;
+
+    [SerializeField] private float minZ = -14.0f;
 
     private Transform player;
 
@@ -36,6 +38,18 @@ public class CameraMovement : MonoBehaviour
         else
         {
             targetPosition += farOffsetPosition;
+        }
+
+        // Clamp Target Position for Y and Z
+
+        if (targetPosition.y < minY)
+        {
+            targetPosition.y = minY;
+        }
+
+        if (targetPosition.z < minZ)
+        {
+            targetPosition.z = minZ;
         }
 
         // Move towards target position with set speed!

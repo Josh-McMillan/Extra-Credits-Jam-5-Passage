@@ -42,6 +42,12 @@ public class PlayerHealth : Damagable
         }
     }
 
+    protected override void OnKill()
+    {
+        currentHealth = 0;
+        Died();
+    }
+
     protected override void OnHeal()
     {
         if (currentHealth < maxHealth)

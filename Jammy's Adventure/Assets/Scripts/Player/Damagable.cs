@@ -11,6 +11,8 @@ public class Damagable : MonoBehaviour
 
     public Action Restore;
 
+    public Action Kill;
+
     [SerializeField] protected int maxHealth = 5;
 
     [SerializeField] protected int invincibilityTime = 10;
@@ -29,6 +31,7 @@ public class Damagable : MonoBehaviour
         Damage += OnTakeDamage;
         Heal += OnHeal;
         Restore += OnRestore;
+        Kill += OnKill;
     }
 
     private void OnDisable()
@@ -36,6 +39,7 @@ public class Damagable : MonoBehaviour
         Damage -= OnTakeDamage;
         Heal -= OnHeal;
         Restore -= OnRestore;
+        Kill -= OnKill;
     }
 
     protected virtual void OnTakeDamage()
@@ -52,6 +56,11 @@ public class Damagable : MonoBehaviour
         {
             currentHealth++;
         }
+    }
+
+    protected virtual void OnKill()
+    {
+        currentHealth = 0;
     }
 
     protected virtual void OnRestore()
